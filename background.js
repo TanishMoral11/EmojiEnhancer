@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'getEmojiSuggestions') {
-    const apiKey = 'AIzaSyA3rEGWVT2uVTJMLOhESCutHQlvWFStUqY'; // Replace with your actual API key
+    const apiKey = 'CONFIG.API_KEY'; // Replace with your actual API key
     const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
     fetch(`${apiUrl}?key=${apiKey}`, {

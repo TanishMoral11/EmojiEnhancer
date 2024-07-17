@@ -5,9 +5,15 @@
   "description": "Suggests emojis based on your WhatsApp messages.",
   "permissions": ["activeTab", "scripting"],
   "background": {
-      "service_worker": "background.js"
+    "service_worker": "background.js"
   },
   "action": {
-      "default_popup": "popup.html"
-  }
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["config.js"]
+    }
+  ]
 }
