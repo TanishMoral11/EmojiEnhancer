@@ -23,7 +23,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       sendResponse({ modifiedText: modifiedText });
     })
     .catch(error => {
-      console.error('Error:', error);
       sendResponse({ error: 'Failed to get emoji suggestions' });
     });
 
